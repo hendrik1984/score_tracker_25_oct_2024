@@ -29,6 +29,10 @@ gem "jbuilder"
 
 gem "bullet"
 
+# Gemfile
+gem 'tailwindcss-rails'
+
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

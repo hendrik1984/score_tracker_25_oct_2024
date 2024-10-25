@@ -1,10 +1,19 @@
-<h1>Games</h1>
-<%= link_to "New Game", new_game_path %>
-<ul>
+
+
+<h2 class="text-2xl font-semibold text-gray-800 mb-4">Games List</h2>
+
+<div class="mt-6">
+  <%= link_to "Add New Game", new_game_path, class: "bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" %>
+</div>
+
+<ul class="space-y-4">
   <% @games.each do |game| %>
-    <li>
-      <%= link_to game.name, game_path(game) %> - Date: <%= game.date %>
+    <li class="border p-4 rounded bg-white shadow">
+      <h3 class="text-xl font-semibold text-gray-700"><%= link_to game.name, game_path(game), class: "text-blue-600 hover:underline" %></h3>
+      <p class="text-gray-600">Date: <%= game.date %></p>
     </li>
   <% end %>
 </ul>
+
+
 

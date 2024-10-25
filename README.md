@@ -21,4 +21,11 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* note:
+A new release of RubyGems is available: 3.4.7 → 3.5.22!
+Run `gem update --system 3.5.22` to update your installation.
+
+Add bin/dev to start foreman
+      create  bin/dev
+Compile initial Tailwind build
+         run  rails tailwindcss:build from "."

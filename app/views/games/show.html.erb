@@ -1,11 +1,14 @@
-<h1><%= @game.name %> - <%= @game.date %></h1>
-<h2>Scores</h2>
-<ul>
+<h1 class="text-2xl font-bold text-gray-800 mb-4"><%= @game.name %> - <%= @game.date %></h1>
+
+<h2 class="text-xl font-semibold text-gray-600">Scores</h2>
+<ul class="space-y-2 mb-4">
   <% @scores.each do |score| %>
-    <li>
-      <%= link_to "#{score.player}: #{score.points} points", edit_game_score_path(@game, score) %>
+    <li class="flex justify-between items-center border-b py-2">
+      <span class="text-gray-700"><%= score.player %>: <%= score.points %> points</span>
+      <%= link_to "Edit", edit_game_score_path(@game, score), class: "text-blue-500 hover:underline" %>
     </li>
   <% end %>
 </ul>
-<%= link_to "Add Score", new_game_score_path(@game) %>
-<%= link_to "back", games_path() %>
+
+<%= link_to "Add Score", new_game_score_path(@game), class: "bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" %>
+<%= link_to "Back to Games", games_path, class: "ml-4 text-gray-600 hover:text-gray-800" %>
