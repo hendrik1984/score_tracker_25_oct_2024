@@ -1,0 +1,8 @@
+<h1><%= @game.name %> - <%= @game.date %></h1>
+<h2>Scores</h2>
+<ul>
+  <% @scores.each do |score| %>
+    <li><%= score.player %>: <%= score.points %> points</li>
+  <% end %>
+</ul>
+<%= link_to "Add Score", new_game_score_path(@game) %>
