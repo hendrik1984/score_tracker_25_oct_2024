@@ -1,0 +1,15 @@
+<h1>Edit Score for <%= @game.name %></h1>
+
+<%= form_with model: [@game, @score] do |f| %>
+  <%= f.label :player %>
+  <%= f.text_field :player, value: @score.player %>
+
+  <%= f.label :points %>
+  <%= f.number_field :points, value: @score.points %>
+
+  <%= f.submit "Update Score" %>
+<% end %>
+
+<div>
+  <%= link_to "back", game_path(@game) %>
+</div>

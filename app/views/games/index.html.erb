@@ -3,7 +3,8 @@
 <ul>
   <% @games.each do |game| %>
     <li>
-      <%= link_to game.name, game_path(game) %> - <%= game.date %>
+      <%= link_to game.name, game_path(game) %> - Date: <%= game.date %>
     </li>
   <% end %>
 </ul>
+

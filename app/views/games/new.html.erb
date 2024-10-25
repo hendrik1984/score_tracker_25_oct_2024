@@ -1,10 +1,10 @@
-<h1>Add Score for <%= @game.name %></h1>
-<%= form_with model: [@game, @score] do |f| %>
-  <%= f.label :player %>
-  <%= f.text_field :player %>
+<h1>New Game</h1>
+<%= form_with model: @game do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
-  <%= f.label :points %>
-  <%= f.number_field :points %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
 
-  <%= f.submit "Add Score" %>
+  <%= f.submit "Create Game" %>
 <% end %>

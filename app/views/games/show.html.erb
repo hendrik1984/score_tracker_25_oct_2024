@@ -2,7 +2,10 @@
 <h2>Scores</h2>
 <ul>
   <% @scores.each do |score| %>
-    <li><%= score.player %>: <%= score.points %> points</li>
+    <li>
+      <%= link_to "#{score.player}: #{score.points} points", edit_game_score_path(@game, score) %>
+    </li>
   <% end %>
 </ul>
 <%= link_to "Add Score", new_game_score_path(@game) %>
+<%= link_to "back", games_path() %>
